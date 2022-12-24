@@ -11,6 +11,7 @@ and open the template in the editor.
     </head>
     <body>
         <?php
+            include "connect.php";
             echo "<form method='post' action='#'>";
                 echo "Mã bài hát:";
                 echo "<input type='text' name='mabaihat'></input><br>";
@@ -24,7 +25,6 @@ and open the template in the editor.
             echo "</form>";
         ?>
         <?php 
-            include "connect.php";
             if(isset($_POST['Submit'])&&($_POST['Submit']=='Create'))
             {  $mabaihat=$_POST['mabaihat'];
                $tenbaihat=$_POST['tenbaihat'];
